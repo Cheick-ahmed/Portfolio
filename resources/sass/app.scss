@@ -1,0 +1,19 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+body {
+  @apply bg-gray-900;
+}
+
+.container {
+  @apply w-10/12 mx-auto;
+}
+
+.section-title::before {
+  @apply absolute rounded-lg left-0 bottom-0 w-16 bg-teal-500;
+  height: 2px;
+  content : '';
+}
