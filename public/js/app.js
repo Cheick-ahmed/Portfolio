@@ -3772,7 +3772,7 @@ var render = function() {
                   },
                   [
                     _vm._v(
-                      "\n                        A propos\n                    "
+                      "\n                        About\n                    "
                     )
                   ]
                 )
@@ -3820,7 +3820,7 @@ var render = function() {
                   },
                   [
                     _vm._v(
-                      "\n                        projets\n                    "
+                      "\n                        Projects\n                    "
                     )
                   ]
                 )
@@ -3840,7 +3840,7 @@ var render = function() {
                   },
                   [
                     _vm._v(
-                      "\n                        mon cv\n                    "
+                      "\n                        Resume\n                    "
                     )
                   ]
                 )

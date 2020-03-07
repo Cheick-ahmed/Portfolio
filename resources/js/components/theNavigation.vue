@@ -11,7 +11,7 @@
                     <li class="mr-6">
                         <a href="#" v-scroll-to="'#about'"
                            class="py-5 px-2 text-sm outline-none capitalize text-gray-200 font-medium transition duration-500">
-                            A propos
+                            About
                         </a>
                     </li>
                     <li class="mr-6">
@@ -23,13 +23,13 @@
                     <li class="mr-6">
                         <a href="#" v-scroll-to="'#works'"
                            class="py-5 px-2 text-sm outline-none capitalize text-gray-200 font-medium transition duration-100">
-                            projets
+                            Projects
                         </a>
                     </li>
                     <li class="ml-4">
                         <a :href="cv_link" target="_blank" rel="nofollow noopener noreferrer"
                            class="px-6 py-3 font-medium border border-teal-500 text-teal-500 focus:outline-none rounded text-xs uppercase font-medium transition duration-200">
-                            mon cv
+                            Resume
                         </a>
                     </li>
                 </ol>
