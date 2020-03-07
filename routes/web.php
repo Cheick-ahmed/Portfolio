@@ -17,9 +17,9 @@ Route::group(['prefix' => 'chs_admin', 'namespace' => 'Admin', 'as' => 'admin.']
         Route::get('', 'ProjectController@index')->name('index');
         Route::get('create', 'ProjectController@create')->name('create');
         Route::post('', 'ProjectController@store')->name('store');
-        Route::get('{project:slug}/edit', 'ProjectController@edit')->name('edit');
-        Route::patch('{project:slug}/edit', 'ProjectController@update')->name('update');
-        Route::delete('{project:slug}', 'ProjectController@destroy')->name('destroy');
+        Route::get('{project:id}/edit', 'ProjectController@edit')->name('edit');
+        Route::patch('{project:id}/edit', 'ProjectController@update')->name('update');
+        Route::delete('{project:id}', 'ProjectController@destroy')->name('destroy');
     });
 
     Route::group(['prefix' => 'skills', 'as' => 'skills.'], function () {
@@ -35,9 +35,6 @@ Route::group(['prefix' => 'chs_admin', 'namespace' => 'Admin', 'as' => 'admin.']
 
 });
 
-Route::group(['prefix' => 'projects', 'as' => 'projects.'], function () {
-    Route::get('', 'ProjectController@index')->name('index');
-});
 
 Route::get('archives', 'ArchiveController@index')->name('archives.index');
 

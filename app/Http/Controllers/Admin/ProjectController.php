@@ -73,5 +73,7 @@ class ProjectController extends Controller
         Image::destroy($i->id);
 
         $project->delete();
+
+        return redirect()->back();
     }
 }
