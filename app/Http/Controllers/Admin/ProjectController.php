@@ -8,6 +8,7 @@ use App\Http\Requests\Project\UpdateProjectRequest;
 use App\Http\Resources\ProjectResource;
 use App\Image;
 use App\Project;
+use App\Skill;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -22,11 +23,15 @@ class ProjectController extends Controller
 
     public function create()
     {
-        return view('admin.projects.create');
+        $skills = Skill::pluck('name', 'id');
+        return view('admin.projects.create', [
+            'skills' => $skills
+        ]);
     }
 
     public function store(CreateProjectRequest $request)
     {
+
         $project = new Project();
         $project->name = $request->name;
         $project->website = 'http://' . $request->website;
@@ -34,7 +39,7 @@ class ProjectController extends Controller
         $project->description = $request->description;
 
         $project->save();
-
+        $project->skills()->attach($request->skills);
         $project->images()->attach($request->image_id);
 
         return redirect()->route('admin.projects.index');

@@ -11,30 +11,82 @@
         </a>
 
 
-
         <div class="w-full lg:w-8/12 mx-auto">
             <form method="post" action="{{route('admin.projects.store')}}">
                 @csrf()
                 <image-uploader endpoint="{{route('admin.store.image')}}"></image-uploader>
 
                 <div class="w-full mb-4 lg:mb-8">
-                    <label for="name" class="block mb-2 text-gray-400 font-montserrat font-medium">Name</label>
-                    <input type="text" class="block w-full border-2 p-3 bg-transparent rounded  text-gray-300 text-sm" name="name" id="name">
+                    <label for="name" class="block mb-2 text-gray-400 font-medium">Name</label>
+                    <input type="text"
+                           class="block w-full border-2 @error('name') border-red-500 @enderror  p-3 bg-transparent rounded  text-gray-300 text-sm"
+                           name="name" id="name">
+                    @error('name')
+                    <span class="text-red-500" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
                 </div>
 
                 <div class="w-full mb-4 lg:mb-8">
-                    <label for="website" class="block mb-2 text-gray-400 font-montserrat font-medium">Website</label>
-                    <input type="text" class="block w-full border-2 p-3 bg-transparent rounded  text-gray-300 text-sm" name="website" id="website" >
+                    <label for="website" class="block mb-2 text-gray-400 font-medium">Website</label>
+                    <input type="text"
+                           class="block w-full @error('website') border-red-500 @enderror border-2 p-3 bg-transparent rounded  text-gray-300 text-sm"
+                           name="website" id="website">
+                    @error('website')
+                    <span class="text-red-500" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
                 </div>
 
                 <div class="w-full mb-4 lg:mb-8">
-                    <label for="githubUrl" class="block mb-2 text-gray-400 font-montserrat font-medium">GithubUrl</label>
-                    <input type="text" class="block w-full border-2 p-3 bg-transparent rounded  text-gray-300 text-sm" name="githubUrl" id="githubUrl" >
+                    <label for="githubUrl"
+                           class="block mb-2 text-gray-400 font-montserrat font-medium">GithubUrl</label>
+                    <input type="text"
+                           class="block w-full @error('githubUrl') border-red-500 @enderror border-2 p-3 bg-transparent rounded  text-gray-300 text-sm"
+                           name="githubUrl" id="githubUrl">
+                    @error('githubUrl')
+                    <span class="text-red-500" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
                 </div>
 
                 <div class="w-full mb-4 lg:mb-8">
-                    <label for="description" class="block mb-2 text-gray-400 font-montserrat font-medium">Description</label>
-                    <textarea type="text" class="block w-full border-2 p-3 bg-transparent rounded  text-gray-300 text-sm" name="description" id="description"></textarea>
+                    <label for="description"
+                           class="block mb-2 text-gray-400 font-montserrat font-medium">Description</label>
+                    <textarea type="text"
+                              class="block w-full border-2 p-3 bg-transparent rounded text-gray-300 text-sm @error('description') border-red-500 @enderror"
+                              name="description" id="description"></textarea>
+                    @error('description')
+                    <span class="text-red-500" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
+
+                <div>
+                    <div class="mb-4">
+                        <h3 class="text-xl text-white">Skills</h3>
+                        @error('skills')
+                            <span class="text-red-500" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
+
+                    @if(isset($skills))
+                        <div class="grid grid-cols-3 lg:grid-cols-5 gap-4 mb-6">
+                            @foreach($skills as $key => $value)
+                                <label for="{{$value}}" class="flex items-center text-white">
+                                    <input type="checkbox" name="skills[]" value="{{$key}}" class="mr-2">
+                                    {{ $value }}
+                                </label>
+                            @endforeach
+
+                        </div>
+                    @endif
                 </div>
 
                 <div>

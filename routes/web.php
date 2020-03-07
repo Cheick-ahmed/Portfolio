@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('', 'HomeController');
+Route::get('', 'HomeController')->name('index');
 
 /**
  * Projects
@@ -38,6 +38,8 @@ Route::group(['prefix' => 'chs_admin', 'namespace' => 'Admin', 'as' => 'admin.']
 Route::group(['prefix' => 'projects', 'as' => 'projects.'], function () {
     Route::get('', 'ProjectController@index')->name('index');
 });
+
+Route::get('archives', 'ArchiveController@index')->name('archives.index');
 
 Route::group(['prefix' => 'skills', 'as' => 'skills.'], function () {
     Route::get('', 'SkillController@index')->name('index');

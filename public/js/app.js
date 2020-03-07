@@ -2161,11 +2161,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       pinned: false
     };
+  },
+  props: {
+    home_link: {
+      type: String,
+      required: true
+    },
+    cv_link: {
+      type: String,
+      required: false
+    }
   },
   methods: {
     addScrollListener: function addScrollListener() {
@@ -3733,7 +3747,7 @@ var render = function() {
             {
               staticClass:
                 "uppercase font-medium font-rubik text-xl text-teal-500 py-2",
-              attrs: { href: "#" }
+              attrs: { href: _vm.home_link }
             },
             [_vm._v("\n            Ahmed.\n        ")]
           ),
@@ -3812,7 +3826,25 @@ var render = function() {
                 )
               ]),
               _vm._v(" "),
-              _vm._m(0)
+              _c("li", { staticClass: "ml-4" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "px-6 py-3 font-medium border border-teal-500 text-teal-500 focus:outline-none rounded text-xs uppercase font-medium transition duration-200",
+                    attrs: {
+                      href: _vm.cv_link,
+                      target: "_blank",
+                      rel: "nofollow noopener noreferrer"
+                    }
+                  },
+                  [
+                    _vm._v(
+                      "\n                        mon cv\n                    "
+                    )
+                  ]
+                )
+              ])
             ])
           ])
         ]
@@ -3820,24 +3852,7 @@ var render = function() {
     ]
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "ml-4" }, [
-      _c(
-        "a",
-        {
-          staticClass:
-            "px-6 py-3 font-medium border border-teal-500 text-teal-500 focus:outline-none rounded text-xs uppercase font-medium transition duration-200",
-          attrs: { href: "#" }
-        },
-        [_vm._v("\n                        mon cv\n                    ")]
-      )
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

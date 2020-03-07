@@ -27,7 +27,8 @@ class CreateProjectRequest extends FormRequest
             'name' => 'required|unique:projects',
             'website' => 'required',
             'githubUrl' => 'required',
-            'description' => 'required'
+            'description' => 'required',
+            'skills' => 'required'
         ];
     }
 }

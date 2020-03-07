@@ -5,16 +5,19 @@
 @section('content')
     <section class="min-h-screen flex justify-center items-center">
         <div class="container">
-            <div class="font-medium lg:pt-16 text-gray-500 font-rubik  tracking-wide leading-9 sm:leading-12">
-                <h1 class="text-xl tracking-wider text-teal-500 font-medium">Hey, je m'appelle</h1>
-                <h2 class="text-2xl sm:text-4xl text-gray-400 tracking-wider  capitalize font-medium sm:mb-1">
-                    sidibe cheick ahmed.
-                </h2>
-                <h3 class="tracking-wider text-2xl sm:text-5xl mb-6 sm:mb-10">
-                    Développeur FullStack.
+            <div class="font-medium lg:pt-16 text-gray-500 font-rubik tracking-wide">
+                <h3 class="tracking-wider text-2xl sm:text-5xl mb-4 sm:mb-6">
+                    Hi there, I'm Ahmed.
                 </h3>
+                <div class="w-full sm:w-6/12 mb-12">
+                    <p class="tracking-wide leading-7">
+                        I'm a Full stack web <span class="capitalize text-teal-500 font-medium">developer</span> based in Paris.
+                        I'm looking for an awesome company ready to bring in life his something awesome ideas on the web.
+                    </p>
+                </div>
+
                 <div class="text-teal-500">
-                    <a href="#" class="py-3 px-6 sm:px-8 font-thin rounded border border-teal-500">
+                    <a href="#" class="py-3 font-medium px-6 sm:px-8 font-thin rounded border border-teal-500">
                         Contact
                     </a>
                 </div>
@@ -132,7 +135,15 @@
                         <div class="bg-blue-900 lg:rounded p-4 lg:mb-8 text-md leading-7 text-gray-400 lg:shadow {{ ($i+1) % 2 == 0 ? ' lg:text-left lg:mr-6' : ' lg:text-right lg:ml-6' }}">
                             {{ $project->description }}
                         </div>
-
+                        @if($project->skills->count())
+                            <div class="mb-4 lg:mb-6 py-2">
+                                <ul class="flex flex-wrap uppercase text-gray-400 text-xs font-medium {{ ($i+1) % 2 == 0 ? '' : ' lg:justify-end' }}">
+                                    @foreach($project->skills as $skill )
+                                        <li class="mx-4 mb-2 lg:mb-4"> {{ $skill->name }} </li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                         <div class="flex items-center {{ ($i+1) % 2 == 0 ? '' : ' lg:justify-end' }} ">
                             <a href="{{$project->githubUrl}}" class="mx-4" target="_blank">
                                 <svg class="fill-current text-gray-400 h-5 w-5" xmlns="http://www.w3.org/2000/svg"
@@ -156,6 +167,12 @@
                 </div>
 
             @endforeach
+            <div class="w-full my-16 mx-auto text-center text-sm">
+                <a href="{{route('archives.index')}}"
+                   class="p-3 px-8 border border-teal-500 rounded text-center text-teal-500 font-rubik py-3">
+                    Show More &rarr;
+                </a>
+            </div>
         </div>
     </section>
 

@@ -27,7 +27,7 @@ class HomeController extends Controller
             'backEnd' => SkillResource::collection(Skill::backEnd()->get()),
             'devops' => SkillResource::collection(Skill::devops()->get()),
             'tools' => SkillResource::collection(Skill::tools()->get()),
-            'projects' => ProjectResource::collection(Project::latest()->get())
+            'projects' => Project::latest()->paginate(3)
         ]);
     }
 }
