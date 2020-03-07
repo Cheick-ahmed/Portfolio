@@ -12,7 +12,7 @@
                 <div class="w-full sm:w-6/12 mb-12">
                     <p class="tracking-wide leading-7">
                         I'm a Full stack web <span class="capitalize text-teal-500 font-medium">developer</span> based in Paris.
-                        I'm looking for an awesome company ready to bring in life his something awesome ideas on the web.
+                        I'm looking for an awesome company ready to bring in life his awesome ideas on the web.
                     </p>
                 </div>
 
@@ -28,21 +28,15 @@
     <section id="about" class="min-h-screen sm:py-20">
         <div class="container">
             <h3 class="section-title relative text-3xl sm:text-4xl capitalize font-rubik text-teal-500 mb-6 sm:mb-12">
-                a propos
+                About me
             </h3>
 
-            <div class="w-full sm:w-7/12 mb-8 text-sm sm:text-xl  font-rubik leading-7 sm:leading-9 tracking-wide text-gray-600">
-                <p>
-                    Je m'appelle Ahmed, étudiant en Informatique à l'université
-                    <span class="text-teal-500">Paris Descartes</span>.
+            <div class="w-full sm:w-7/12 mb-6 text-sm sm:text-xl  font-rubik tracking-wide text-gray-600">
+                <p class="tracking-wide leading-8 mb-6">
+                    I'm 22 years old student at University Paris Descartes currently studying web development.
                 </p>
-                <p class="sm:mb-8">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta magni alias labore repellendus nobis
-                    corporis porro voluptate dolores rem deleniti facilis, consectetur aut iusto nulla perferendis natus
-                    sequi. Modi, dolore.
-                </p>
-                <p class="sm:text-3xl text-gray-300">
-                    Un tour d'horizon de mes technos
+                <p class="tracking-wide leading-7">
+                    There are a technologies I've been working with recently :
                 </p>
             </div>
 
@@ -111,6 +105,7 @@
                 @endif
 
             </div>
+
         </div>
     </section>
 
@@ -176,5 +171,5 @@
         </div>
     </section>
 
-    <section id="contact" class="min-h-screen"></section>
+    <section id="contact" class="min-h-screen border-t"></section>
 @endsection
