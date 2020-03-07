@@ -37,4 +37,9 @@ class Project extends Model
     {
         return $this->belongsToMany(Image::class);
     }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }
