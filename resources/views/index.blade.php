@@ -11,8 +11,9 @@
                 </h3>
                 <div class="w-full sm:w-6/12 mb-12">
                     <p class="tracking-wide leading-7">
-                        I'm a Full stack web <span class="capitalize text-teal-500 font-medium">developer</span> based in Paris.
-                        I'm looking for an awesome company ready to bring in life his awesome ideas on the web.
+                        I'm a Full stack web <span class="capitalize text-teal-500 font-medium">developer</span> based
+                        in Paris.
+                        I'm looking for an awesome company ready to bring in life awesome ideas on the web.
                     </p>
                 </div>
 
@@ -41,13 +42,12 @@
             </div>
 
             <div class="grid grid-cols-2 font-rubik tracking-wide lg:grid-cols-4 gap-4">
-
                 @if($frontEnd->count())
                     <div>
                         <h3 class="text-teal-500 text-lg mb-4 sm:mb-5 tracking-wider">
                             Frontend
                         </h3>
-                        <ul class="text-sm uppercase font-medium">
+                        <ul class="text-sm capitalize font-medium">
                             @foreach($frontEnd as $f)
                                 <li class="text-teal-500 mb-4">
                                     &rarr; <span class="mx-2 text-gray-500"> {{ $f->name }} </span>
@@ -56,13 +56,12 @@
                         </ul>
                     </div>
                 @endif
-
                 @if($backEnd->count())
                     <div>
                         <h3 class="text-teal-500 text-lg mb-4 sm:mb-5 tracking-wider">
                             Backend
                         </h3>
-                        <ul class="text-sm uppercase font-medium">
+                        <ul class="text-sm  font-medium">
                             @foreach($backEnd as $b)
                                 <li class="text-teal-500 mb-4  capitalize">
                                     &rarr; <span class="mx-2 text-gray-500"> {{ $b->name }} </span>
@@ -71,7 +70,6 @@
                         </ul>
                     </div>
                 @endif
-
                 @if($devops->count())
                     <div>
                         <h3 class="text-teal-500 text-lg mb-4 sm:mb-5 tracking-wider">
@@ -85,9 +83,7 @@
                             @endforeach
                         </ul>
                     </div>
-
                 @endif
-
                 @if($tools->count())
                     <div>
                         <h3 class="text-teal-500 text-lg mb-4 sm:mb-5 tracking-wider">
@@ -101,11 +97,8 @@
                             @endforeach
                         </ul>
                     </div>
-
                 @endif
-
             </div>
-
         </div>
     </section>
 
@@ -148,7 +141,6 @@
                             </a>
                             <a href="{{$project->website}}" class="mx-4" target="_blank">
                                 <svg class="fill-current text-gray-400 h-5 w-5" xmlns="http://www.w3.org/2000/svg"
-                                     role="img"
                                      viewBox="0 0 194.818 194.818"><title>External</title>
                                     <g>
                                         <path d="M185.818,2.161h-57.04c-4.971,0-9,4.029-9,9s4.029,9,9,9h35.312l-86.3,86.3c-3.515,3.515-3.515,9.213,0,12.728 c1.758,1.757,4.061,2.636,6.364,2.636s4.606-0.879,6.364-2.636l86.3-86.3v35.313c0,4.971,4.029,9,9,9s9-4.029,9-9v-57.04 C194.818,6.19,190.789,2.161,185.818,2.161z"></path>
@@ -171,5 +163,20 @@
         </div>
     </section>
 
-    <section id="contact" class="min-h-screen border-t"></section>
+    <section id="contact" class="min-h-screen flex flex-col items-center justify-center font-rubik tracking-wider">
+        <h2 class="text-xl text-teal-500 text-center mb-4">What's Next ?</h2>
+        <h3 class="text-3xl md:text-5xl font-semibold  text-gray-400 mb-6">Get In Touch</h3>
+        <div class="w-full sm:w-6/12 mb-8 sm:mb-16">
+            <p class="text-md leading-8 text-gray-500 text-center">
+                I'm currently looking for <span class="text-teal-500">ApprenticeShip</span> or <span
+                        class="text-teal-500">Full-time</span> opportunities. <br>
+                Feel free to reach out if you're looking for a developer, have a question, or just want to connect.
+            </p>
+        </div>
+        <div class="text-teal-500">
+            <a href="#" class="text-sm py-3 font-medium px-6 sm:px-8 font-thin rounded border border-teal-500">
+                Say hello
+            </a>
+        </div>
+    </section>
 @endsection

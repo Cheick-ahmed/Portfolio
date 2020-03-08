@@ -7,7 +7,7 @@
         <div class="container">
             <div class="font-rubik sm:mb-16">
                 <h3 class="md:text-6xl text-gray-300 tracking-wider font-semibold">Archive</h3>
-                <p class="text-lg text-teal-500 font-light tracking-wider">A big list of this I've been worked on</p>
+                <p class="text-lg text-teal-500 font-light tracking-wider">A big list of things I've been worked on</p>
             </div>
             <div class="">
                 @if(count($projects))
@@ -32,7 +32,7 @@
                                         @if($project->skills->count())
                                             <ul class="flex items-center">
                                                 @foreach($project->skills as $i => $s)
-                                                    <li class="{{ $i > 0 ? 'mx-6 list-disc' : '' }}">{{$s->name}}</li>
+                                                    <li class="text-xs uppercase {{ $i > 0 ? 'mx-2 list-disc' : 'mr-2' }}">{{$s->name}}</li>
                                                 @endforeach
                                             </ul>
                                         @else
