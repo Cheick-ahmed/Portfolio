@@ -68,9 +68,10 @@ class ProjectController extends Controller
 
         $project->images()->detach($project->images()->first());
 
-        Storage::disk('public')->delete('images/' . $i->hash_name);
-
-        Image::destroy($i->id);
+        if (isset($i->hash_name)) {
+            Storage::disk('public')->delete('images/' . $i->hash_name);
+            Image::destroy($i->id);
+        }
 
         $project->delete();
 
