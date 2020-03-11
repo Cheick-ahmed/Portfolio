@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f0dcbdc80776ca79d6311b8f92c5a4b5",
+    "content-hash": "ced04d31f1dc60760b50984fd32faa8a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3502,6 +3502,58 @@
                 "php"
             ],
             "time": "2020-03-06T02:47:42+00:00"
+        },
+        {
+            "name": "writingink/wink",
+            "version": "v0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/writingink/wink.git",
+                "reference": "54531693eba59a3d6c193196f897f0d3b04ef965"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/writingink/wink/zipball/54531693eba59a3d6c193196f897f0d3b04ef965",
+                "reference": "54531693eba59a3d6c193196f897f0d3b04ef965",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "~5.7|~6.0|~7.0",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "nunomaduro/larastan": "^0.3.8"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Wink\\WinkServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wink\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mohamed Said",
+                    "email": "mohamed@laravel.com"
+                }
+            ],
+            "description": "Wink Publishing Framework.",
+            "keywords": [
+                "blog",
+                "framework",
+                "laravel"
+            ],
+            "time": "2020-03-06T05:09:18+00:00"
         }
     ],
     "packages-dev": [
