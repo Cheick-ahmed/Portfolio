@@ -179,7 +179,7 @@
         <h3 class="text-3xl md:text-5xl font-semibold  text-gray-400 mb-6">Get In Touch</h3>
         <div class="w-full sm:w-6/12 mb-8 sm:mb-16">
             <p class="text-md leading-8 text-gray-500 text-center">
-                I'm currently looking for <span class="text-teal-500">Full-time</span> opportunities as <span class="text-teal-500">Junior developper</span>  <br>
+                I'm currently looking for <span class="text-teal-500">Full-time</span> opportunities as <span class="text-teal-500">Junior developper</span>. <br>
                 Feel free to reach out if you're looking for a developer, have a question, or just want to connect.
             </p>
         </div>
