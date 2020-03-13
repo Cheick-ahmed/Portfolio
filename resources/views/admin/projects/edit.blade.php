@@ -21,7 +21,7 @@
         <div class="w-full lg:w-8/12 mx-auto">
             <form method="post" action="{{route('admin.projects.update',$project)}}">
                 @csrf()
-
+                @method('PATCH')
                 <div class="w-full mb-4 lg:mb-8">
                     <label for="name" class="block mb-2 text-gray-400 font-medium">Name</label>
                     <input type="text"
