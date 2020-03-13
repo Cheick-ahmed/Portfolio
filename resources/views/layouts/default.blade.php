@@ -16,7 +16,7 @@
 </head>
 <body>
 <div id="app">
-    <the-navigation home_link="{{route('index')}}" cv_link="{{asset('docs/SidibeCheickAhmed_DevFullstack.pdf')}}"></the-navigation>
+    <the-navigation home_link="{{route('index')}}" cv_link="{{asset('docs/Cheick_SIDIBE_DEV-WEB.pdf')}}"></the-navigation>
     @yield('content')
     @include('layouts.partials.theFooter')
 </div>
