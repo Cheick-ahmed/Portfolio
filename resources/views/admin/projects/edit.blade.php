@@ -8,7 +8,7 @@
     <div class=" my-6 lg:my-12 lg:mt-6">
         <a href="{{route('admin.projects.index')}}">
             <svg class="h-6 w-6 mb-8 lg:mb-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                <path d="M15 17v-2.99A4 4 0 0 0 11 10H8v5L2 9l6-6v5h3a6 6 0 0 1 6 6v3h-2z"/>
+                <path d="M15 17v-2.99A4 4 0 0 0 11 10H8v5L2 9l6-6v5h3a6 6 0 0 1 6 6v3h-2z"></path>
             </svg>
         </a>
 
