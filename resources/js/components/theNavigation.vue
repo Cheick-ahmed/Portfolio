@@ -2,8 +2,8 @@
     <div class="hidden sm:block fixed top-0 py-2 shadow z-50 bg-gray-900 w-full transition-all duration-700"
          :class=" { 'transform -translate-y-56' : pinned } ">
         <nav class=" container flex flex-wrap lg:flex-no-wrap justify-between items-center">
-            <a :href="home_link" class="uppercase font-medium font-rubik text-xl text-teal-500 py-2">
-                Ahmed.
+            <a :href="home_link" class="tracking-wider uppercase font-medium font-rubik text-xl text-teal-500 py-2">
+                &lt;ahmed&#47;&gt;
             </a>
 
             <div class="font-rubik tracking-widest">

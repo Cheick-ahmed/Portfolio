@@ -5,11 +5,6 @@
 @endsection
 
 @section('content')
-    @extends('admin.layouts.default')
-
-@section('title', 'New project')
-
-@section('content')
     <div class=" my-6 lg:my-12 lg:mt-6">
         <a href="{{route('admin.projects.index')}}">
             <svg class="h-6 w-6 mb-8 lg:mb-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -103,6 +98,4 @@
             </form>
         </div>
     </div>
-@endsection
-
 @endsection

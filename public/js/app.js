@@ -3746,10 +3746,10 @@ var render = function() {
             "a",
             {
               staticClass:
-                "uppercase font-medium font-rubik text-xl text-teal-500 py-2",
+                "tracking-wider uppercase font-medium font-rubik text-xl text-teal-500 py-2",
               attrs: { href: _vm.home_link }
             },
-            [_vm._v("\n            Ahmed.\n        ")]
+            [_vm._v("\n            <ahmed/>\n        ")]
           ),
           _vm._v(" "),
           _c("div", { staticClass: "font-rubik tracking-widest" }, [
