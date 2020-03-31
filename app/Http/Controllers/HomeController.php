@@ -21,13 +21,12 @@ class HomeController extends Controller
 
         $socials = [];
 
-
         return view('index', [
             'frontEnd' => SkillResource::collection(Skill::frontEnd()->get()),
             'backEnd' => SkillResource::collection(Skill::backEnd()->get()),
             'devops' => SkillResource::collection(Skill::devops()->get()),
             'tools' => SkillResource::collection(Skill::tools()->get()),
-            'projects' => Project::paginate(3)
+            'projects' => Project::orderBy('order', 'DESC')->paginate(3)
         ]);
     }
 }

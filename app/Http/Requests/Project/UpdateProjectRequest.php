@@ -27,7 +27,8 @@ class UpdateProjectRequest extends FormRequest
             'name' => 'required',
             'website' => 'required',
             'githubUrl' => 'required',
-            'description' => 'required'
+            'description' => 'required',
+            'order' => 'required|numeric'
         ];
     }
 }

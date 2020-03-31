@@ -31,12 +31,12 @@ class ProjectController extends Controller
 
     public function store(CreateProjectRequest $request)
     {
-
         $project = new Project();
         $project->name = $request->name;
         $project->website = 'http://' . $request->website;
         $project->githubUrl = $request->githubUrl;
         $project->description = $request->description;
+        $project->order = $request->order;
 
         $project->save();
         $project->skills()->attach($request->skills);
@@ -47,8 +47,10 @@ class ProjectController extends Controller
 
     public function edit(Project $project)
     {
+        $skills = Skill::pluck('name', 'id');
         return view('admin.projects.edit', [
-            'project' => $project
+            'project' => $project,
+            'skills' => $skills
         ]);
     }
 
@@ -56,7 +58,7 @@ class ProjectController extends Controller
     public function update(UpdateProjectRequest $request, Project $project)
     {
         $project->update(
-            $request->only('name', 'website', 'githubUrl', 'description')
+            $request->only('name', 'website', 'githubUrl', 'description', 'order')
         );
 
         return redirect()->route('admin.projects.index');

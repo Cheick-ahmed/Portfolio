@@ -20,6 +20,7 @@
                     <th class="px-5 py-3 text-left">Name</th>
                     <th class="px-5 py-3 text-left">Website</th>
                     <th class="px-5 py-3 text-left">GithubUrl</th>
+                    <th class="px-5 py-3 text-left">Order</th>
                     <th class="px-5 py-3 text-left"></th>
 
                 </tr>
@@ -38,6 +39,9 @@
                         </td>
                         <td class="px-5 py-5 border-b-4 border-teal-500 capitalize text-sm">
                             {{ $project->githubUrl }}
+                        </td>
+                        <td class="px-5 py-5 border-b-4 border-teal-500 capitalize text-sm">
+                            {{ $project->order }}
                         </td>
 
                         <td class="px-5 py-5 border-b-4 border-teal-500 capitalize text-sm">

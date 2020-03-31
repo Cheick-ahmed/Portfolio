@@ -3,22 +3,21 @@
 @section('title', 'archive')
 
 @section('content')
-    <div class="min-h-screen sm:py-32 sm:px-32">
+    <div class="min-h-screen py-16 lg:py-32">
         <div class="container">
-            <div class="font-rubik sm:mb-16">
-                <h3 class="md:text-6xl text-gray-300 tracking-wider font-semibold">Archive</h3>
-                <p class="text-lg text-teal-500 font-light tracking-wider">A big list of things I've been worked on</p>
+            <div class="font-rubik mb-16">
+                <h3 class="text-4xl lg:text-6xl text-gray-300 tracking-wider font-semibold">Archive</h3>
+                <p class="lg:text-lg text-teal-500 font-light tracking-wider">A big list of things I've been worked on</p>
             </div>
             <div class="">
                 @if(count($projects))
                     <div>
-                        <table class="sm:min-w-full">
+                        <table class="min-w-full">
                             <thead>
                             <tr class="text-gray-300">
                                 <th class="pr-5 py-3 text-left">Name</th>
                                 <th class="px-5 py-3 text-left">Built with</th>
                                 <th class="px-5 py-3 text-left">Links</th>
-
                             </tr>
                             </thead>
                             @foreach($projects as $project)

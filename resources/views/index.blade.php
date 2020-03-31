@@ -118,12 +118,12 @@
             @foreach($projects as $i => $project)
                 <div class="font-montserrat flex flex-wrap lg:flex-no-wrap opacity-100 mb-32 transition-all duration-700">
 
-                    <div class="w-full flex lg:w-7/12 relative lg:rounded-lg {{ ($i+1) % 2 == 0 ? ' order-first lg:order-last' : ' lg:justify-end' }}">
+                    <div class="w-full flex lg:w-7/12 relative lg:rounded {{ ($i+1) % 2 == 0 ? ' order-first lg:order-last' : ' lg:justify-end' }}">
                         <div class="absolute bg-blue-900 h-full lg:rounded-lg w-full opacity-40 hover:opacity-0 transition-all duration-500"></div>
                         @if(isset($project->images()->first()->path))
                             <img src="{{ $project->images()->first()->path }}"
                                  alt="{{ $project->images()->first()->name }}"
-                                 class="lg:rounded-lg object-cover object-center h-64 lg:h-full w-full">
+                                 class="lg:rounded object-cover h-64 lg:h-full w-full">
                         @endif
                     </div>
                     <!-- Project title -->

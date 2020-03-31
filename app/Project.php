@@ -13,6 +13,7 @@ class Project extends Model
         'website',
         'githubUrl',
         'description',
+        'order'
     ];
 
     public static function boot()

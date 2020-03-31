@@ -65,6 +65,18 @@
                     </span>
                     @enderror
                 </div>
+                <div class="w-full mb-4 lg:mb-8">
+                    <label for="order"
+                           class="block mb-2 text-gray-400 font-montserrat font-medium">Order</label>
+                    <input type="number"
+                           class="block w-full border-2 p-3 bg-transparent rounded text-gray-300 text-sm @error('order') border-red-500 @enderror"
+                           name="order" id="order">
+                    @error('description')
+                    <span class="text-red-500" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
 
                 <div>
                     <div class="mb-4">

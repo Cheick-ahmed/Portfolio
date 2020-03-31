@@ -16511,6 +16511,42 @@ module.exports = g;
 
 /***/ }),
 
+/***/ "./resources/js sync recursive \\.vue$/":
+/*!***********************************!*\
+  !*** ./resources/js sync \.vue$/ ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./components/ImageUploader.vue": "./resources/js/components/ImageUploader.vue",
+	"./components/Project/project.vue": "./resources/js/components/Project/project.vue",
+	"./components/Project/skill.vue": "./resources/js/components/Project/skill.vue",
+	"./components/theNavigation.vue": "./resources/js/components/theNavigation.vue"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./resources/js sync recursive \\.vue$/";
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -16538,12 +16574,12 @@ Vue.use(VueScrolTo, {
  *
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('the-navigation', __webpack_require__(/*! ./components/theNavigation.vue */ "./resources/js/components/theNavigation.vue")["default"]);
-Vue.component('image-uploader', __webpack_require__(/*! ./components/ImageUploader.vue */ "./resources/js/components/ImageUploader.vue")["default"]);
-Vue.component('project', __webpack_require__(/*! ./components/Project/project */ "./resources/js/components/Project/project.vue")["default"]);
+var files = __webpack_require__("./resources/js sync recursive \\.vue$/");
+
+files.keys().map(function (key) {
+  return Vue.component(key.split('/').pop().split('.')[0], files(key)["default"]);
+});
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
